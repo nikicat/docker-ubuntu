@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM ubuntu:12.10
+FROM ubuntu:12.04
 
 # Update OS.
 RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe multiverse" > /etc/apt/sources.list
