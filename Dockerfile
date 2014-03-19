@@ -8,13 +8,13 @@
 FROM ubuntu:12.04
 
 # Update OS.
-RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get upgrade -y
+RUN apt-get dist-upgrade -y
 
 # Install basic packages.
-RUN apt-get install -y software-properties-common
-RUN apt-get install -y curl git htop unzip vim wget
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python-software-properties
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl git htop unzip vim wget
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
