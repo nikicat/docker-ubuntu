@@ -1,5 +1,5 @@
 ## Ubuntu Dockerfile
-
+[![Docker Repository on Quay.io](https://quay.io/repository/nikicat/ubuntu/status "Docker Repository on Quay.io")](https://quay.io/repository/nikicat/ubuntu)
 
 This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for [Docker](https://www.docker.io/)'s [trusted build](https://index.docker.io/u/dockerfile/ubuntu/) published to the public [Docker Registry](https://index.docker.io/).
 
