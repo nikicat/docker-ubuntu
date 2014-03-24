@@ -5,16 +5,12 @@
 #
 
 # Pull base image.
-FROM ubuntu:12.04
-
-# Update OS.
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe multiverse" > /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get dist-upgrade -y
+FROM racker/precise-with-updates
 
 # Install basic packages.
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python-software-properties
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl git htop unzip vim wget
+RUN sed -i 's/mirror.rackspace.com/archive.ubuntu.com/' /etc/apt/sources.list
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python-software-properties curl git htop unzip vim wget build-essential tmux bash-completion
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
