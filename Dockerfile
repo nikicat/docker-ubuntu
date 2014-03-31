@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM quay.io/nikicat/baseimage
+FROM racker/precise-with-updates
 
 # Install basic packages.
 RUN sed -i 's/mirror.rackspace.com/archive.ubuntu.com/' /etc/apt/sources.list
