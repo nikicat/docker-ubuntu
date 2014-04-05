@@ -9,8 +9,7 @@ FROM racker/precise-with-updates
 
 # Install basic packages.
 RUN sed -i 's/mirror.rackspace.com/archive.ubuntu.com/' /etc/apt/sources.list
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python-software-properties curl git htop unzip vim wget build-essential tmux bash-completion
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y python-software-properties curl git htop unzip vim wget build-essential tmux bash-completion && apt-get clean
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
