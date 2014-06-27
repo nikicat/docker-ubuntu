@@ -18,4 +18,5 @@ ADD root/scripts /root/scripts
 
 # Set working directory.
 ENV HOME /root
+ENV LC_ALL C.UTF-8
 WORKDIR /root
