@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM racker/precise-with-updates
+FROM yandex/trusty-with-updates
 
 # Install basic packages.
 RUN sed -i 's|://.*\..*\.com|://ru.archive.ubuntu.com|' /etc/apt/sources.list
