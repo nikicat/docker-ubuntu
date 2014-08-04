@@ -10,6 +10,7 @@ FROM yandex/trusty-with-updates
 # Install basic packages.
 RUN sed -i 's|://.*\..*\.com|://ru.archive.ubuntu.com|' /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y python-software-properties software-properties-common curl git htop unzip vim wget build-essential tmux bash-completion && apt-get clean
+RUN chmod +s /usr/bin/sudo
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
