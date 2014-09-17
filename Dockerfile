@@ -22,3 +22,5 @@ ADD root/.m2/settings.xml /root/.m2/settings.xml
 ENV HOME /root
 ENV LC_ALL C.UTF-8
 WORKDIR /root
+
+ENTRYPOINT bash
