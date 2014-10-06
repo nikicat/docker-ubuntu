@@ -17,6 +17,7 @@ ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
 ADD root/scripts /root/scripts
 ADD root/.m2/settings.xml /root/.m2/settings.xml
+ADD env.sh /etc/profile.d/env.sh
 
 # Set working directory.
 ENV HOME /root
