@@ -47,4 +47,5 @@ ENV HOME /root
 ENV LC_ALL C.UTF-8
 WORKDIR /root
 
-ENTRYPOINT bash
+ENTRYPOINT ["bash", "-c"]
+CMD ["bash"]
